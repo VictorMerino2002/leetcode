@@ -1,0 +1,43 @@
+# 49 - Group Anagrams
+
+## Description
+
+Given an array of strings strs, group the together. You can return the answer in any order.
+
+ 
+
+Example 1:
+
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
+
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+Explanation:
+
+    There is no string in strs that can be rearranged to form "bat".
+    The strings "nat" and "tan" are anagrams as they can be rearranged to form each other.
+    The strings "ate", "eat", and "tea" are anagrams as they can be rearranged to form each other.
+
+Example 2:
+
+Input: strs = [""]
+
+Output: [[""]]
+
+Example 3:
+
+Input: strs = ["a"]
+
+Output: [["a"]]
+
+ 
+
+Constraints:
+
+    1 <= strs.length <= 104
+    0 <= strs[i].length <= 100
+    strs[i] consists of lowercase English letters.
+
+## Solution
+
+To solve this, problem I iterated over the array of Strings and create a sorted array of chars of the word to use it as the key of a HashMap with an array as value containing the words with the same key. Once the loop is finished, I return the values of the HashMap into an array.
